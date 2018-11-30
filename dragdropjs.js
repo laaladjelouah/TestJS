@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var filename = "";
-    var fileformatError = "Le format de votre pièce jointe doit être un des formats listés: .jpg, .bmp, .png, .tif, .pdf, .doc, .gif, .docx ";
+    var fileformatError = $("#paramsjsdrag").attr("data-fileformatError") ;
     var maxfiletError = "Le nombre de pièces jointes est limité à 5";
     var filesizeError = "La taille de la pièce jointe ne doit pas excéder 4 Mo ";
     var dropZone = document.getElementById('dragOverlay');
