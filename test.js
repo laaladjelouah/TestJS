@@ -1,14 +1,14 @@
 $(document).ready(function () {
     var filename = "";
-    var fileformatError = $("#paramsjsdrag").attr("data-fileformatError") ;
-    var maxfiletError = "Le nombre de pièces jointes est limité à 5";
-    var filesizeError = "La taille de la pièce jointe ne doit pas excéder 4 Mo ";
+    var fileformatError = $("#paramsjsdrag").attr("data-fileformatError");
+    var maxfiletError = $("#paramsjsdrag").attr("data-maxfiletError");
+    var filesizeError = $("#paramsjsdrag").attr("data-filesizeError");
     var dropZone = document.getElementById('dragOverlay');
     var dropZoneTitle = document.getElementById('dragTitle');
     var dropZoneSubTitle = document.getElementById('dragSubTitle');
     var filesStream = Array();
     var filesInfo = Array();
-    var maxSize = 4194304; // 4Mo
+    var maxSize = $("#paramsjsdrag").attr("data-filemaxsize"); // 4Mo
 
     function showDropZone() {
         dropZone.style.display = "block";
